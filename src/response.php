@@ -184,6 +184,7 @@ public function get_http_status() {
 	return (int)$this->http_status;
 }
 
+/**
  * sets a new location the client should follow
  * 
  * @param string $location    absolute url

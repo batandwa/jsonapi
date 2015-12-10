@@ -175,6 +175,15 @@ public function set_http_status($http_status) {
 }
 
 /**
+ * returns the set status code apart from the response array
+ * used by the errors collection to figure out the generic status code
+ *
+ * @return int probably one of the predefined ones in jsonapi\response::STATUS_*
+ */
+public function get_http_status() {
+	return (int)$this->http_status;
+}
+
  * sets a new location the client should follow
  * 
  * @param string $location    absolute url
